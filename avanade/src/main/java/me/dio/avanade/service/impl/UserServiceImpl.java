@@ -2,15 +2,19 @@ package me.dio.avanade.service.impl;
 
 import java.util.NoSuchElementException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import me.dio.avanade.model.User;
 import me.dio.avanade.repository.UserRespository;
 import me.dio.avanade.service.UserService;
 
+@Service
 public class UserServiceImpl implements UserService {
-
+	
+	
 	private final UserRespository userRepository;
 
-	@Autowired
+	
 	public UserServiceImpl(UserRespository userRepository) {
 		this.userRepository = userRepository;
 	}
